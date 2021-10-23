@@ -1,0 +1,15 @@
+/** @format */
+
+#item {
+	width: 300px;
+	background-color: beige;
+	margin: 7px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+#item img {
+	width: 200px;
+	margin: 15px;
+	border-radius: 10px;
+}

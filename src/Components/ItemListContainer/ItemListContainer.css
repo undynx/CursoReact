@@ -1,7 +1,7 @@
 /** @format */
 
-p {
-	text-align: center;
+.greeting {
 	color: gray;
-	font-weight: 100;
+	font-size: 18px;
+	text-align: center;
 }
