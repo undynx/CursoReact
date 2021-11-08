@@ -2,6 +2,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import CartWidget from '../../Components/CartWidget/CartWidget';
+import {NavLink} from 'react-router-dom'
 
 function NavBar() {
 
@@ -9,15 +10,14 @@ return (
     <>
         <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">MovRoller</Navbar.Brand>
+                <NavLink to="/">MovRoller</NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Freeskate</Nav.Link>
-                        <Nav.Link href="#link">Fitness</Nav.Link>
-                        <Nav.Link href="#link">Agressive</Nav.Link>
-                        <Nav.Link href="#link">Velocidad</Nav.Link>
+                        <NavLink to="/">Inicio</NavLink>
+                        <NavLink to='/items/freeskate'>Freeskate</NavLink>
+                        <NavLink to='/items/agressive'>Agressive</NavLink>
+                        <NavLink to='/items/velocidad'>Velocidad</NavLink>
                     </Nav>
                 </Navbar.Collapse>
                 <CartWidget />
