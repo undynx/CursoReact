@@ -1,5 +1,6 @@
 import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList.jsx';
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -62,7 +63,9 @@ function ItemListContainer({ greeting }) {
                     {greeting}
                 </p>
             
-                <ItemList productos={productos}/>
+                <ItemList productos={productos} />
+                <ItemDetailContainer productos={productos} />
+                
             </div>
         </>
     )

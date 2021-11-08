@@ -1,0 +1,17 @@
+/** @format */
+
+#buttonArticleList {
+	background-color: beige !important;
+	border: black solid 0.5px !important;
+	color: black !important;
+}
+
+#divButtonArticle {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+#divButtonArticle a {
+	text-decoration-line: none;
+}

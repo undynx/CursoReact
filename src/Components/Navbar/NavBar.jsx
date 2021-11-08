@@ -1,3 +1,4 @@
+import './NavBar.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -10,7 +11,7 @@ return (
     <>
         <Navbar bg="light" expand="lg">
             <Container>
-                <NavLink to="/">MovRoller</NavLink>
+                <NavLink id="brandLink" to="/">MovRoller</NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">

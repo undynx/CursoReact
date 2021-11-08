@@ -1,8 +1,11 @@
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './Components/Navbar/NavBar';
 import Header from './Components/Header/Header';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+//import ItemDetail from './Components/ItemDetail/ItemDetail';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   
@@ -16,7 +19,9 @@ function App() {
               <Header title='Bienvenidx!' />
               
               <Link to='/items'>
-                <button>Lista de Artículos</button>
+                <div id="divButtonArticle">
+                  <button id="buttonArticleList" className="btn btn-primary">Lista de Artículos</button>
+                </div>
               </Link>
             </Route>
                 
@@ -26,6 +31,10 @@ function App() {
           
             <Route exact path='/items/:category'>
               <ItemListContainer greeting='Estas son las mejores ofertas para vos ;)' />
+            </Route>
+          
+            <Route exact path='/items/:itemId'>
+              <ItemDetailContainer />
             </Route>
           
           </Switch>
