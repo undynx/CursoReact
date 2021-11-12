@@ -23,10 +23,9 @@ function Picker({ productos }) {
     return (
         <article id="picker">
 
-            <button className="btn btn-outline-primary">Detalle</button>
             <div id="counter">
                 <button className="btn btn-outline-primary" onClick={botonMenos}> - </button>
-                <input className="inputContador" value={cantidad} readonly="readonly"/>
+                <input className="inputContador" value={cantidad} readOnly="readOnly"/>
                 <button className="btn btn-outline-primary" onClick={botonMas}> + </button>
             </div>
             <button className="btn btn-primary">Agregar al Carrito</button>

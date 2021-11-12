@@ -1,10 +1,11 @@
 import React from 'react';
+import { items } from '../../data/items';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 
-function ItemDetailContainer({ productos }) {
+function ItemDetailContainer() {
 
     const [item, setItem] = useState({});
     const { itemId } = useParams();
@@ -12,19 +13,19 @@ function ItemDetailContainer({ productos }) {
     useEffect(() => {
         const promesaDetail = new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(productos)
+                resolve(items)
                 reject('error')
             }, 3000);
         });
         
-        promesaDetail.then((resolve) => {
-            setItem(resolve.find((i) => (i.id === itemId)))
-    });
+        promesaDetail.then((resolve) => 
+            setItem(resolve.find(i => (i.id.toString() === itemId)))
+    );
     }, [itemId])
 
     return (
         <div>
-            <ItemDetail productos={item} />
+            <ItemDetail item={item} />
         </div>
     )
 }

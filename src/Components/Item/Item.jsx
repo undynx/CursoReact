@@ -14,7 +14,7 @@ function Item({ productos }) {
 
                 <Picker productos={productos} />
 
-                <Link to={`/items/${productos.id}`}>
+                <Link to={`/itemdetail/${productos.id}`}>
                     <button className="btn btn-primary" id="detail-button">Detalle</button>
                 </Link>
             </article>
